@@ -1,0 +1,91 @@
+.navbar-inverse {
+  background-color: #444 !important;
+  /*#DEDEDE*/
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #eee !important;
+}
+
+.contact {
+  max-width: 374px;
+}
+
+.contact-container {
+  margin-top: 30px;
+}
+
+.contact-container * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thumbnail {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.indent {
+  margin-left: 7px;
+}
+
+.jumbotron {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.contact-link > kbd {
+  background-color: #FFF;
+}
+
+.contact-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.label {
+  display: inline-flex !important;
+}
+
+.tag-cloud {
+  margin-top: 5px;
+}
+
+.page {
+  margin-top: 90px;
+}
+
+.logo {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-size: 50px 50px;
+  background-color: transparent;
+  margin: 5px;
+  vertical-align: middle;
+  fill: transparent;
+}
+
+.imageloader > img {
+  width: 100%;
+}
+
+.imageloader {
+  width: 100%;
+  text-align: center;
+}
+
+.preloader {
+  width: 100px !important;
+  display: inline-block;
+}
+
+.error-text {
+  color: #C9302C;
+}
+
+a, a:active, button, button:active {
+  outline: 0 !important;
+}
