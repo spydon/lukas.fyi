@@ -9,10 +9,10 @@ export default class Navigation extends React.Component {
           <div id="navbar" className="navbar-collapse collapse">
             <ul className="nav navbar-nav">
               <li>
-                <a href="#">About Lukas</a>
+                <a href="/">About Lukas</a>
               </li>
               <li>
-                <a href="#blog">Blog</a>
+                <a href="blog">Blog</a>
               </li>
            </ul>
           </div>
