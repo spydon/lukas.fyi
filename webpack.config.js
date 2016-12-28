@@ -21,8 +21,11 @@ var common = {
       /* set up jsx */
       {
           test: /\.jsx?$/,
-          loaders: ['babel'],
-          include: APP_PATH
+          loader: 'babel-loader',
+          include: APP_PATH,
+          query: {
+              presets: ['react', 'es2015']
+          }
       },
       { test: /\.(woff|woff2)$/,  loader: "url-loader?limit=10000&mimetype=application/font-woff" },
       { test: /\.ttf$/,    loader: "file-loader" },

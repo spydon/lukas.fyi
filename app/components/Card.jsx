@@ -56,7 +56,7 @@ export default class Card extends React.Component {
               </tr>
               <tr>
                 <td>Employer:</td>
-                <td>Uprise (Master Thesis)</td>
+                <td>Uprise (EA/DICE)</td>
               </tr>
               <tr>
                 <td>Interests:</td>
