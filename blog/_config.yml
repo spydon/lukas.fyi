@@ -11,21 +11,19 @@ author: Lukas Klingsbo
 author_link: http://lukas.fyi
 author_description: Coder, climber and bit crazier than you are allowed to be.
 email: lukas.klingsbo@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://lukas.fyi/blog" # the base hostname & protocol for your site
+description: Mostly about programming, written by Lukas Klingsbo. Tech that often
+    will be mentioned is linux, scala, android and just general hacks.
+baseurl: "/blog" # "" the subpath of your site, e.g. /blog
+url: "http://lukas.fyi" # the base hostname & protocol for your site
 
 # Picturefill
 # A responsive image polyfill: http://scottjehl.github.io/picturefill/
-picturefill: false
+picturefill: true
 
 # Typography
 # To use, publish a kit and enter the ID here. If you do not wish to use Typekit,
 # leave this ID blank
-typekit_kit_id: kwf5dox
+typekit_kit_id:
 
 # Build settings
 gems: [jekyll-paginate]
