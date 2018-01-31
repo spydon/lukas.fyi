@@ -23,12 +23,13 @@ export default class Card extends React.Component {
   }
 
   render() {
-    const interests = ["Programming", "Linux", "Tech", "Climbing", "Slacklining"];
-    const tags = ["Linux", "Scala", "Erlang", "Java", "React", "LaTeX", "Javascript",
-                  "Bash", "Nginx", "GWT", "Zsh", "VIM", "Arch", "Debian", "Apache", "MongoDB",
+    const interests = ["Programming", "Linux", "Mechanical Keyboards", "Climbing", "Backpacking"];
+    const tags = ["Linux", "Scala", "Erlang", "AWS", "Ansible", "Terraform", "Java", "React", 
+                  "LaTeX", "Javascript", "CSS", "HTML", "CentOS",
+                  "Bash", "Nginx", "GWT", "Zsh", "Vim", "Arch", "Debian", "Apache", "MongoDB",
                   "Riak", "MySQL", "Python", "IntelliJ", "Eclipse", "Git", "Subversion", "SML",
-                  "REST", "Gradle", "SBT", "Webpack", "NPM", "Microcontrollers", "Gerrit", "CSS", "HTML",
-                  "Scrum", "Android", "Jetty", "Java EE", "MariaDB", "PostgreSQL", "Docker"];
+                  "REST", "Gradle", "SBT", "Webpack", "NPM", "Microcontrollers", "Gerrit",
+                  "Scrum", "Android", "Jetty", "MariaDB", "PostgreSQL", "Docker"];
 
     return (
       <div className="contentview jumbotron">
@@ -43,20 +44,20 @@ export default class Card extends React.Component {
           </div>
           <div className="col-md-10">
             <h2>Lukas Klingsbo</h2>
-            <h4 className="indent">Software Developer</h4>
+            <h4 className="indent">Software Engineer</h4>
             <table className="table table-hover">
               <tbody>
               <tr>
-                <td>Degree:</td>
-                <td>Master of Computer Science, Uppsala University</td>
+                <td>Current Work:</td>
+                <td>Freelancing Backend Engineer at <a href="http://klarna.com" target="_blank">Klarna</a></td>
               </tr>
               <tr>
                 <td>Current Location:</td>
                 <td>Uppsala, Sweden</td>
               </tr>
               <tr>
-                <td>Employer:</td>
-                <td>Uprise (EA/DICE)</td>
+                <td>Degree:</td>
+                <td>Master of Computer Science, Uppsala University</td>
               </tr>
               <tr>
                 <td>Interests:</td>

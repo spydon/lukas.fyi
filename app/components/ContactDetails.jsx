@@ -8,7 +8,6 @@ export default class ContactDetails extends React.Component {
     this.onClickEmail = this.onClickEmail.bind(this);
     this.onClickTel = this.onClickTel.bind(this);
     this.onClickLinkedIn = this.onClickLinkedIn.bind(this);
-    this.onClickBlog = this.onClickBlog.bind(this);
     this.onClickCV = this.onClickCV.bind(this);
     this.onClickGitHub = this.onClickGitHub.bind(this);
   }
@@ -18,7 +17,7 @@ export default class ContactDetails extends React.Component {
   }
 
   onClickEmail() {
-    const contact = "zdhluzdhkahdsz.dkhldizdnzgdshbodzh@gdmhzadihldz.hdzhcdozhmdz".replace(/h|z|d/g, "");
+    const contact = "hmdzed@hlduhkdzadhszhhd.fzhdyzdzzhi".replace(/h|z|d/g, "");
     this.showContact("mailto:", contact);
   }
 
@@ -37,10 +36,6 @@ export default class ContactDetails extends React.Component {
 
   onClickCV() {
     this.showContact("http://", "lukas.fyi/cv.pdf");
-  }
-
-  onClickBlog() {
-    this.showContact("http://", "lukas.fyi/blog");
   }
 
   showContact(protocol, contact) {
@@ -67,7 +62,6 @@ export default class ContactDetails extends React.Component {
           <button className="btn btn-primary" onClick={this.onClickEmail}>E-Mail</button>
           <button className="btn btn-primary" onClick={this.onClickLinkedIn}>LinkedIn</button>
           <button className="btn btn-primary" onClick={this.onClickGitHub}>GitHub</button>
-          <button className="btn btn-primary" onClick={this.onClickBlog}>Blog</button>
           <button className="btn btn-primary btn-success" onClick={this.onClickCV}>CV</button>
           <button className="btn btn-primary btn-danger" onClick={this.onClickTel}>Phone Number</button>
         </div>
