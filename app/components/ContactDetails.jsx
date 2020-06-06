@@ -35,7 +35,7 @@ export default class ContactDetails extends React.Component {
   }
 
   onClickCV() {
-    this.showContact("http://", "lukas.fyi/cv.pdf");
+    this.showContact("https://", "lukas.fyi/cv.pdf");
   }
 
   showContact(protocol, contact) {

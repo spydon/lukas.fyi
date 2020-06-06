@@ -24,12 +24,12 @@ export default class Card extends React.Component {
 
   render() {
     const interests = ["Programming", "Linux", "Mechanical Keyboards", "Climbing", "Backpacking"];
-    const tags = ["Linux", "Scala", "Erlang", "AWS", "Ansible", "Terraform", "Java", "React", 
-                  "LaTeX", "Javascript", "CSS", "HTML", "CentOS",
+    const tags = ["Linux", "Scala", "Erlang", "Haskell", "AWS", "Ansible", "Terraform", "Java", "React",
+                  "LaTeX", "Javascript", "CSS", "HTML", "CentOS", "Dart",
                   "Bash", "Nginx", "GWT", "Zsh", "Vim", "Arch", "Debian", "Apache", "MongoDB",
-                  "Riak", "MySQL", "Python", "IntelliJ", "Eclipse", "Git", "Subversion", "SML",
-                  "REST", "Gradle", "SBT", "Webpack", "NPM", "Microcontrollers", "Gerrit",
-                  "Scrum", "Android", "Jetty", "MariaDB", "PostgreSQL", "Docker"];
+                  "Riak", "MySQL", "Python", "IntelliJ", "Git", "Subversion", "SML",
+                  "REST", "Gradle", "SBT", "Webpack", "NPM", "Microcontrollers",
+                  "Scrum", "Android", "MariaDB", "PostgreSQL", "Docker"];
 
     return (
       <div className="contentview jumbotron">
@@ -44,16 +44,20 @@ export default class Card extends React.Component {
           </div>
           <div className="col-md-10">
             <h2>Lukas Klingsbo</h2>
-            <h4 className="indent">Software Engineer</h4>
+            <h4 className="indent">Senior Software Engineer</h4>
             <table className="table table-hover">
               <tbody>
               <tr>
                 <td>Current Work:</td>
-                <td>Freelancing Backend Engineer at <a href="http://klarna.com" target="_blank">Klarna</a></td>
+                <td>Freelancing Backend Engineer at <a href="https://klarna.com" target="_blank">Klarna</a></td>
+              </tr>
+              <tr>
+                <td>Open Source:</td>
+                <td>Maintainer of Flutter's largest game engine <a href="https://github.com/flame-engine/flame" target="_blank">Flame</a></td>
               </tr>
               <tr>
                 <td>Current Location:</td>
-                <td>Uppsala, Sweden</td>
+                <td>Stockholm, Sweden</td>
               </tr>
               <tr>
                 <td>Degree:</td>
