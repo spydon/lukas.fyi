@@ -40,21 +40,14 @@ jobs:
       - name: Build site
         run: dart pub global run jaspr_cli:jaspr build
 
-      - name: Assemble Cloudflare deploy directory
-        run: |
-          rm -rf deploy
-          mkdir -p deploy/public
-          cp -r build/jaspr/. deploy/public/
-          rm -rf deploy/public/.dart_tool deploy/public/.build.manifest
-          cp wrangler.jsonc deploy/wrangler.jsonc
-
       - name: Deploy to web branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./deploy
+          publish_dir: ./build/jaspr
           publish_branch: web
           force_orphan: true
+          exclude_assets: '.dart_tool,.build.manifest'
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
           commit_message: "Deploy ${{ github.sha }}"
