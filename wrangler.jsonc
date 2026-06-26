@@ -1,0 +1,14 @@
+{
+  // Cloudflare Workers static-assets configuration.
+  //
+  // The CI workflow publishes the built site into `public/` next to this file
+  // on the `web` branch, so `wrangler deploy` (run from the branch root) serves
+  // it as a static-assets-only Worker.
+  //
+  // The `name` must match the Worker created in the Cloudflare dashboard.
+  "name": "lukas-fyi",
+  "compatibility_date": "2026-06-26",
+  "assets": {
+    "directory": "./public"
+  }
+}
