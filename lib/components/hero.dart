@@ -143,26 +143,97 @@ class Hero extends StatelessComponent {
       display: .flex,
       justifyContent: .center,
     ),
+    css.keyframes('photo-ring-spin', {
+      'to': const Styles(transform: Transform.rotate(Angle.deg(360))),
+    }),
     css('.photo-ring', [
       css('&').styles(
         position: .relative(),
         padding: .all(6.px),
         radius: .circular(50.percent),
-        raw: {'background': accentGradient},
+        raw: {'background': accentGradient, 'isolation': 'isolate'},
         shadow: const BoxShadow(
           offsetX: Unit.zero,
           offsetY: Unit.pixels(20),
           blur: Unit.pixels(60),
           color: Color('rgba(76,141,255,0.25)'),
         ),
+        transition: const Transition.combine([
+          Transition(
+            'transform',
+            duration: Duration(milliseconds: 500),
+            curve: Curve.cubicBezier(0.34, 1.56, 0.64, 1),
+          ),
+          Transition('box-shadow', duration: Duration(milliseconds: 500)),
+        ]),
+      ),
+      // Sharp rotating flame ring, revealed on hover.
+      css('&::before').styles(
+        position: .absolute(top: .zero, left: .zero, bottom: .zero, right: .zero),
+        radius: .circular(50.percent),
+        raw: {
+          'content': '""',
+          'background': 'conic-gradient(from 0deg, #4c8dff, #ff7a3c, #ffb347, #4c8dff)',
+          'z-index': '0',
+          'opacity': '0',
+          'transition': 'opacity 400ms ease',
+          'animation': 'photo-ring-spin 4s linear infinite',
+          'animation-play-state': 'paused',
+        },
+      ),
+      // Soft blurred glow halo behind the photo.
+      css('&::after').styles(
+        position: .absolute(
+          top: (-16).px,
+          left: (-16).px,
+          bottom: (-16).px,
+          right: (-16).px,
+        ),
+        radius: .circular(50.percent),
+        raw: {
+          'content': '""',
+          'background': 'conic-gradient(from 0deg, #4c8dff, #ff7a3c, #ffb347, #4c8dff)',
+          'filter': 'blur(28px)',
+          'z-index': '-1',
+          'opacity': '0',
+          'transition': 'opacity 400ms ease',
+          'animation': 'photo-ring-spin 4s linear infinite',
+          'animation-play-state': 'paused',
+        },
       ),
       css('img').styles(
+        position: .relative(),
         display: .block,
         width: 300.px,
         height: 300.px,
         radius: .circular(50.percent),
         border: .all(color: AppColors.background, width: 4.px),
-        raw: {'object-fit': 'cover'},
+        raw: {
+          'object-fit': 'cover',
+          'z-index': '1',
+          'transition': 'transform 500ms cubic-bezier(0.34,1.56,0.64,1), filter 500ms ease',
+        },
+      ),
+    ]),
+    css('.photo-ring:hover', [
+      css('&').styles(
+        transform: const Transform.scale(1.05),
+        shadow: const BoxShadow(
+          offsetX: Unit.zero,
+          offsetY: Unit.pixels(28),
+          blur: Unit.pixels(80),
+          color: Color('rgba(255,122,60,0.4)'),
+        ),
+      ),
+      css('&::before').styles(
+        raw: {'opacity': '1', 'animation-play-state': 'running'},
+      ),
+      css('&::after').styles(
+        raw: {'opacity': '0.85', 'animation-play-state': 'running'},
+      ),
+      css('img').styles(
+        transform: const Transform.scale(1.06),
+        raw: {'filter': 'saturate(1.2) brightness(1.05)'},
       ),
     ]),
     // Responsive.

@@ -18,10 +18,9 @@ class Footer extends StatelessComponent {
             Component.text("Let's build something"),
           ]),
           p(classes: 'contact-lead', [
-            Component.text(
-              'Got something to share or a question to ask? My inbox is '
-              'always open.',
-            ),
+            Component.text('Got something to share or a question to ask?'),
+            br(),
+            Component.text('My inbox is always open.'),
           ]),
           a(
             href: 'mailto:me@lukas.fyi',
