@@ -58,11 +58,11 @@ class Hero extends StatelessComponent {
     ),
     css('.hero-inner').styles(
       display: .grid,
-      gap: Gap(row: 40.px, column: 56.px),
       alignItems: .center,
       gridTemplate: const GridTemplate(
         columns: GridTracks([GridTrack(TrackSize.fr(1.4)), GridTrack(TrackSize.fr(1))]),
       ),
+      gap: Gap(row: 40.px, column: 56.px),
     ),
     css('.hero-name').styles(
       margin: .only(bottom: 14.px),
@@ -93,24 +93,24 @@ class Hero extends StatelessComponent {
     ),
     css('.hero-actions').styles(
       display: .flex,
+      margin: .only(bottom: 30.px),
       flexWrap: .wrap,
       gap: Gap(row: 14.px, column: 14.px),
-      margin: .only(bottom: 30.px),
     ),
     // Buttons (shared).
     css('.btn').styles(
       display: .inlineFlex,
-      alignItems: .center,
-      justifyContent: .center,
       padding: .symmetric(vertical: 13.px, horizontal: 24.px),
       radius: .circular(10.px),
-      fontSize: 0.98.rem,
-      fontWeight: .w600,
       cursor: .pointer,
       transition: const Transition.combine([
         Transition('transform', duration: Duration(milliseconds: 150)),
         Transition('box-shadow', duration: Duration(milliseconds: 150)),
       ]),
+      justifyContent: .center,
+      alignItems: .center,
+      fontSize: 0.98.rem,
+      fontWeight: .w600,
     ),
     css('.btn:hover').styles(
       transform: const Transform.translate(y: Unit.pixels(-2)),
@@ -130,8 +130,8 @@ class Hero extends StatelessComponent {
     ),
     css('.btn-ghost', [
       css('&').styles(
-        color: AppColors.text,
         border: .all(color: AppColors.border, width: 1.px),
+        color: AppColors.text,
         backgroundColor: AppColors.surface,
       ),
       css('&:hover').styles(
@@ -151,7 +151,6 @@ class Hero extends StatelessComponent {
         position: .relative(),
         padding: .all(6.px),
         radius: .circular(50.percent),
-        raw: {'background': accentGradient, 'isolation': 'isolate'},
         shadow: const BoxShadow(
           offsetX: Unit.zero,
           offsetY: Unit.pixels(20),
@@ -166,6 +165,7 @@ class Hero extends StatelessComponent {
           ),
           Transition('box-shadow', duration: Duration(milliseconds: 500)),
         ]),
+        raw: {'background': accentGradient, 'isolation': 'isolate'},
       ),
       // Sharp rotating flame ring, revealed on hover.
       css('&::before').styles(
@@ -202,12 +202,12 @@ class Hero extends StatelessComponent {
         },
       ),
       css('img').styles(
-        position: .relative(),
         display: .block,
+        position: .relative(),
         width: 300.px,
         height: 300.px,
-        radius: .circular(50.percent),
         border: .all(color: AppColors.background, width: 4.px),
+        radius: .circular(50.percent),
         raw: {
           'object-fit': 'cover',
           'z-index': '1',
@@ -217,13 +217,13 @@ class Hero extends StatelessComponent {
     ]),
     css('.photo-ring:hover', [
       css('&').styles(
-        transform: const Transform.scale(1.05),
         shadow: const BoxShadow(
           offsetX: Unit.zero,
           offsetY: Unit.pixels(28),
           blur: Unit.pixels(80),
           color: Color('rgba(255,122,60,0.4)'),
         ),
+        transform: const Transform.scale(1.05),
       ),
       css('&::before').styles(
         raw: {'opacity': '1', 'animation-play-state': 'running'},
