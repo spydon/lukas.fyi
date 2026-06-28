@@ -14,16 +14,20 @@ class Footer extends StatelessComponent {
     return Component.fragment([
       section(id: 'contact', classes: 'section contact', [
         div(classes: 'container contact-inner', [
-          h2(classes: 'contact-title', [Component.text("Let's build something")]),
+          h2(classes: 'contact-title', [
+            Component.text("Let's build something"),
+          ]),
           p(classes: 'contact-lead', [
             Component.text(
-              'Whether it is open source, a game engine question or a new '
-              'opportunity, my inbox is always open.',
+              'Got something to share or a question to ask? My inbox is '
+              'always open.',
             ),
           ]),
-          a(href: 'mailto:me@lukas.fyi', classes: 'btn btn-primary contact-btn', [
-            Component.text('me@lukas.fyi'),
-          ]),
+          a(
+            href: 'mailto:me@lukas.fyi',
+            classes: 'btn btn-primary contact-btn',
+            [Component.text('me@lukas.fyi')],
+          ),
           const SocialLinks(),
         ]),
       ]),
@@ -56,7 +60,8 @@ class Footer extends StatelessComponent {
       backgroundColor: AppColors.surface,
       raw: {
         'text-align': 'center',
-        'background-image': 'radial-gradient(40rem 20rem at 50% -40%, rgba(76,141,255,0.16), transparent 70%)',
+        'background-image':
+            'radial-gradient(40rem 20rem at 50% -40%, rgba(76,141,255,0.16), transparent 70%)',
       },
     ),
     css('.contact-title').styles(
