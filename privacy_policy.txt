@@ -1,0 +1,71 @@
+Privacy policy for Sun Tracker
+
+Last updated: 16 November 2026
+
+Sun Tracker is an Android app made by Lukas Klingsbo (spydon). It shows where
+the sun is on the sky at your location. This policy explains what the app does
+with information on your device.
+
+In short: Sun Tracker does not collect, store on any server, share or sell any
+personal information. Everything happens on your device.
+
+
+No data leaves your device
+
+Sun Tracker does not have permission to access the internet, so it cannot send
+any information anywhere. It contains no analytics, no advertising, no crash
+reporting and no accounts.
+
+
+Camera
+
+The camera is used only to show a live view behind the sun overlay. The app
+does not take photos, record video or save any images, and the camera view is
+never sent anywhere.
+
+
+Location
+
+Your location is used only to calculate where the sun is, when it rises and
+sets, and the difference between magnetic and true north where you are. It is
+kept in memory while the app is running and is never saved or sent anywhere.
+The location is provided by the location services of your Android device, which
+are covered by the privacy policy of their provider.
+
+
+Motion sensors
+
+The compass, accelerometer and gyroscope are used only to know which way the
+phone is pointing. These readings are used immediately and never saved or sent
+anywhere.
+
+
+Settings stored on your device
+
+The app saves its calibration settings (compass correction and field of view)
+on your device so that they are kept between launches. These settings contain
+no personal information and are deleted when you uninstall the app.
+
+
+Permissions
+
+You can deny or revoke the camera and location permissions at any time in the
+Android settings. Without the camera the app shows the sun over a plain
+background, and without location it cannot calculate where the sun is.
+
+
+Children
+
+Sun Tracker does not collect any information from anyone, including children.
+
+
+Changes to this policy
+
+If this policy changes, the new version will be published at
+https://spydon.dev/privacy_policy.txt with an updated date.
+
+
+Contact
+
+If you have any questions about this policy, open an issue at
+https://github.com/spydon/sun_tracker/issues
