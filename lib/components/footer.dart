@@ -59,8 +59,7 @@ class Footer extends StatelessComponent {
       backgroundColor: AppColors.surface,
       raw: {
         'text-align': 'center',
-        'background-image':
-            'radial-gradient(40rem 20rem at 50% -40%, rgba(76,141,255,0.16), transparent 70%)',
+        'background-image': 'radial-gradient(40rem 20rem at 50% -40%, rgba(76,141,255,0.16), transparent 70%)',
       },
     ),
     css('.contact-title').styles(
